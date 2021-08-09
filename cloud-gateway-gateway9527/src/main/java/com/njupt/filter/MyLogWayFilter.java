@@ -27,6 +27,7 @@ public class MyLogWayFilter implements GlobalFilter, Ordered {
         String uname = exchange.getRequest().getQueryParams().getFirst("uname");
         if(uname==null){
             log.info("****非法用户，o(╥﹏╥)o");
+            log.info("测试代码");
             exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
             return exchange.getResponse().setComplete();
         }

@@ -1,0 +1,30 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+
+eureka:
+  client:
+    #表示是否将自己注册EurekaServer 默认为true
+    register-with-eureka: false
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/erueka/ # 入驻地址
+
+
+
+
+ribbon:
+  #建立连接所用时间  两端连接所用时间
+  ReadTimeout: 5000
+  # 建立连接后从服务器读取可用资源的所用时间
+  ConnectTimeout: 5000
+
+
+
+logging:
+  level:
+    # feign 日志以什么级别监控哪个接口
+    com.njupt.service.PaymentFeignService: debug

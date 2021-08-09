@@ -32,7 +32,7 @@ public class MyLogWayFilter implements GlobalFilter, Ordered {
             log.info("我也也是测试代码");
             log.info("master test!");
             log.info("my-new test!");
-            log.info("server test!")
+            log.info("server test!");
             exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
             return exchange.getResponse().setComplete();
         }

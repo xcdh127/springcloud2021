@@ -29,6 +29,7 @@ public class MyLogWayFilter implements GlobalFilter, Ordered {
             log.info("****非法用户，o(╥﹏╥)o");
             log.info("测试代码");
             log.info("我也是测试代码");
+            log.info("我也也是测试代码");
             exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
             return exchange.getResponse().setComplete();
         }
